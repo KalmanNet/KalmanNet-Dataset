@@ -13,5 +13,5 @@ For the synthetic linear dataset, we set F and H to take the controllable canoni
 
 ## Non-linear case
 
-data_gen.pt includes one trajectory of length 6,000,000 of Lorenz Attractor model with J=5 and $\Delta t = 10^{-5}$. 
+data_gen.pt includes one trajectory of length 6,000,000 of Lorenz Attractor model with J=5 and - <img src="https://latex.codecogs.com/png.latex?\Delta t = 10^{-5}" />. 
 
