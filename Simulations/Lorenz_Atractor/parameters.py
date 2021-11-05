@@ -34,6 +34,7 @@ J_mod = 2
 # Decimation ratio
 delta_t_gen =  1e-5
 delta_t = 0.02
+delta_t_mod = 0.02
 delta_t_test = 0.01
 ratio = delta_t_gen/delta_t_test
 
