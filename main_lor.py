@@ -78,10 +78,10 @@ print("testset size:",test_target.size())
 
 #Generate and load data Decimation case 
 print("Data generation for Decimation case")
-[test_target, test_input] = Decimate_and_perturbate_Data(true_sequence, delta_t_gen, delta_t, N_T, h, r[rindex], offset)
+[test_target, test_input] = Decimate_and_perturbate_Data(true_sequence, delta_t_gen, delta_t, N_T, h, r[0], offset)
 print("testset size:",test_target.size())
-[train_target_long, train_input_long] = Decimate_and_perturbate_Data(true_sequence, delta_t_gen, delta_t, N_E, h, r[rindex], offset)
-[cv_target_long, cv_input_long] = Decimate_and_perturbate_Data(true_sequence, delta_t_gen, delta_t, N_CV, h, r[rindex], offset)
+[train_target_long, train_input_long] = Decimate_and_perturbate_Data(true_sequence, delta_t_gen, delta_t, N_E, h, r[0], offset)
+[cv_target_long, cv_input_long] = Decimate_and_perturbate_Data(true_sequence, delta_t_gen, delta_t, N_CV, h, r[0], offset)
 if chop:
    print("chop training data")  
    [train_target, train_input] = Short_Traj_Split(train_target_long, train_input_long, T)
