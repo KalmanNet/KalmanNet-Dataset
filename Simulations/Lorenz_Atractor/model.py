@@ -14,31 +14,6 @@ else:
    cuda0 = torch.device("cpu")
    print("Running on the CPU")
 
-def f_test(x):
-    
-    #A = torch.add(torch.einsum('nhw,wa->nh', B, x).T,C)
-    A = torch.add(torch.reshape(torch.matmul(B, x),(m,m)).T,C)
-    
-    # Taylor Expansion for F    
-    F = torch.eye(m)
-    for j in range(1,J+1):
-        F_add = (torch.matrix_power(A*delta_t_test, j)/math.factorial(j)).to(cuda0)
-        F = torch.add(F, F_add).to(cuda0)
-
-    return torch.matmul(F, x)
-
-def f_gen(x):
-
-    #A = torch.add(torch.einsum('nhw,wa->nh', B, x).T,C)
-    A = torch.add(torch.reshape(torch.matmul(B, x),(m,m)).T,C)
-    
-    # Taylor Expansion for F    
-    F = torch.eye(m)
-    for j in range(1,J+1):
-        F_add = (torch.matrix_power(A*delta_t_gen, j)/math.factorial(j)).to(cuda0)
-        F = torch.add(F, F_add).to(cuda0)
-
-    return torch.matmul(F, x)
 
 def f(x):
 
