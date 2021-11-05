@@ -11,8 +11,8 @@ from datetime import datetime
 from filing_paths import path_model, path_session
 import sys
 sys.path.insert(1, path_model)
-from parameters import T, T_test, m1x_0, m2x_0, m, n,delta_t_gen,delta_t
-from model import f, h, fInacc, hInacc, fRotate, h_nonlinear, q, r
+from parameters import T, T_test, m1x_0, m2x_0, m, n,delta_t_gen,delta_t, q, r
+from model import f, h, fInacc, hInacc, fRotate, h_nonlinear
 
 if torch.cuda.is_available():
    dev = torch.device("cuda:0")  # you can continue going on here, like cuda:1 cuda:2....etc.
